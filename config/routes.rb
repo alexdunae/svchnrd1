@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  # use our UsersController instead of the default from Clearance
+  resources :users
 
-root "welcome#welcome"
+  root "welcome#welcome"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
