@@ -1,3 +1,30 @@
+<%= form_for(@user) do |f| %>
+
+  title<br>
+  <%= f.text_field :title %>
+
+  first name<br>
+  <%= f.text_field :first_name %>
+
+  last name<br>
+  <%= f.text_field :last_name %>
+
+  user name<br>
+  <%= f.text_field :user_name %>
+
+  <br><br>
+  email<br>
+  <%= f.email_field(:email, {}) %>
+
+  <br><br>
+  password<br>
+  <%= f.password_field :password %>
+
+  <button type="submit">Save</button>
+
+<% end %>
+
+<!--
 <div class="text-field">
   <%= form.label :title %>
   <%= form.text_field :title, type: 'Title/Rank' %>
@@ -26,4 +53,4 @@
 <div class="password-field">
   <%= form.label :password %>
   <%= form.password_field :password %>
-</div>
+</div>  -->
