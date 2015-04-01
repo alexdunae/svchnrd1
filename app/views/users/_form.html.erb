@@ -1,24 +1,29 @@
 <%= form_for(@user) do |f| %>
 
+  <div>
   title<br>
-  <%= f.text_field :title %>
+  <%= f.text_field :title %></div>
 
+  <div>
   first name<br>
-  <%= f.text_field :first_name %>
-
+  <%= f.text_field :first_name %></div>
+  
+  <div>
   last name<br>
-  <%= f.text_field :last_name %>
-
+  <%= f.text_field :last_name %></div>
+  
+  <div>
   user name<br>
-  <%= f.text_field :user_name %>
-
-  <br><br>
+  <%= f.text_field :user_name %></div>
+  
+  <div>
   email<br>
-  <%= f.email_field(:email, {}) %>
+  <%= f.email_field(:email, {}) %></div>
 
-  <br><br>
+  <div>
   password<br>
   <%= f.password_field :password %>
+  </div>
 
   <button type="submit">Save</button>
 

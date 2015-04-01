@@ -1,0 +1,10 @@
+<p>Welcome <%= current_user.first_name %></p>
+
+<p>A list of your members:</p>
+
+<% current_user.members.each do |member| %>
+
+<%= render member %><br>
+<% end %>
+
+<p>A list of your orders:</p>  
