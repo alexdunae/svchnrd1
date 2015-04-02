@@ -9,10 +9,9 @@
 <br>
 <p>A list of your orders:</p>
 
-<%# current_user.orders.each do |order| %>
-<!-- <%#= link_to(body_type.name, body_type_path(body_type)) %> --> 
+<% current_user.orders.each do |order| %>
 
-<%#= render 'orders/index_orders' %><br>
+<%= render 'orders/index_orders' %><br>
 [Link to the Order Details page/partial]
 
-<%# end %> 
+<% end %> 

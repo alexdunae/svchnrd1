@@ -1,6 +1,9 @@
+<p><%= link_to 'Back to Members', user_path(current_user) %></p>
+
 <p>Originally entered by: <%= @member.user.title %> <%= @member.user.last_name %> </p>
 <hr>
 <p><%= @member.rank %> <%= @member.last_name %>'s Personal Information</p>
+
 <p><%= @member.first_name %> <%= @member.initials %> <%= @member.nick_name %> <%= @member.decorations %>
 
 <p>Years of Service: <%= @member.years_service %>
@@ -14,3 +17,4 @@
 
 
 <%= render @member.postings %>
+

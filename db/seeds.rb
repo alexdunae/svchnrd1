@@ -57,5 +57,7 @@ graham.postings.create(unit_id: 10, start_post: Date.new(2003, 3, 31), end_post:
 graham.postings.create(unit_id: 9, start_post: Date.new(2006, 4, 10), end_post: Date.new(2013, 8, 11))
 graham.postings.create(unit_id: 11, start_post: Date.new(2013, 8, 12), end_post: Date.new(2014, 2, 20))
 
+Order.create(member: 1, ordered: Date.new(2012, 9, 26), reviewed: Date.new(2012, 9, 26), order_paid: Date.new(2012, 10, 2), printed: Date.new(2012, 10, 5), shipped: Date.new(2012, 10, 6), tracking_num: "N/A", remarks: 'Hand Delivered')
+Order.create(member: 2, ordered: Date.new(2014, 1, 26), reviewed: Date.new(2014, 1, 26), order_paid: Date.new(2014, 2, 2), printed: Date.new(2014, 2, 5), shipped: Date.new(2014, 2, 10), tracking_num: "N/A", remarks: 'Hand Delivered')
 
 
