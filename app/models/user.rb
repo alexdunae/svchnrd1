@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_many :members
   has_many :payfwds
   has_many :shippings
+  has_many :orders
 
   # user = User.find(1)
   # user.record_sign_in

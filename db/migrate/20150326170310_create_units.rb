@@ -1,7 +1,6 @@
-class CreateBadges < ActiveRecord::Migration
+class CreateUnits < ActiveRecord::Migration
   def change
     create_table :units do |t|
-      t.string :badge_code
       t.string :mil_name
       t.string :mil_abbrev
       t.integer :unit_type

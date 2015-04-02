@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   # use our UsersController instead of the default from Clearance
   resources :users
-  
   resources :members
+  resources :postings
 
   root "welcome#welcome"
 

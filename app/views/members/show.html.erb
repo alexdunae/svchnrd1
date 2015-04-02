@@ -4,7 +4,7 @@
 <p><%= @member.first_name %> <%= @member.initials %> <%= @member.nick_name %> <%= @member.decorations %>
 
 <p>Years of Service: <%= @member.years_service %>
-<p>Starting Branch:  <%= @member.start_badge %>  Ending Branch:  <%= @member.end_badge %>
+<p>Starting Branch:  <%= @member.start_branch %>  Ending Branch:  <%= @member.end_branch %>
 
 <p>Commemoration:  <%= @member.commemoration %>
 <p>Signature Block?  <%= @member.sign_block %>
@@ -13,9 +13,4 @@
 <p><%= @member.rank %> <%= @member.last_name %>'s Career:</p>
 
 
-
-<% @member.postings.each do |posting| %>
-
-<%= render 'postings/posting' %><br>
-
-<% end %>
+<%= render @member.postings %>
