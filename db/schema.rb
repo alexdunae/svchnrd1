@@ -16,23 +16,6 @@ ActiveRecord::Schema.define(version: 20150326181341) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "badges", force: :cascade do |t|
-    t.integer  "badge_id"
-    t.string   "mil_name"
-    t.string   "mil_abbrev"
-    t.integer  "unit_type"
-    t.string   "location"
-    t.string   "parent_unit"
-    t.string   "caption"
-    t.integer  "unit_id"
-    t.date     "start_date"
-    t.date     "end_date"
-    t.string   "predec"
-    t.string   "decend"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
   create_table "members", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "service_number"
@@ -43,8 +26,8 @@ ActiveRecord::Schema.define(version: 20150326181341) do
     t.string   "initials"
     t.string   "decorations"
     t.integer  "years_service"
-    t.integer  "start_badge"
-    t.integer  "end_badge"
+    t.integer  "start_branch"
+    t.integer  "end_branch"
     t.string   "commemoration"
     t.integer  "trim_color"
     t.integer  "sign_block"
@@ -88,7 +71,7 @@ ActiveRecord::Schema.define(version: 20150326181341) do
   end
 
   create_table "postings", force: :cascade do |t|
-    t.integer  "badge_id"
+    t.integer  "unit_id"
     t.integer  "member_id"
     t.date     "start_post"
     t.date     "end_post"
@@ -107,6 +90,23 @@ ActiveRecord::Schema.define(version: 20150326181341) do
     t.string   "prov"
     t.string   "post_code"
     t.string   "special_instr"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "units", force: :cascade do |t|
+    t.string   "badge_code"
+    t.string   "mil_name"
+    t.string   "mil_abbrev"
+    t.integer  "unit_type"
+    t.string   "location"
+    t.string   "parent_unit"
+    t.string   "caption"
+    t.string   "badge_image_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "predec"
+    t.string   "decend"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
