@@ -1,0 +1,9 @@
+<p><%= link_to 'Back to Members', user_path(current_user) %></p>
+
+<p>Order Tracking Number: <%= @order.tracking_num %> / <%#= @order.member.rank %> <%#= @order.member.last_name %>: Order Date: <%= @order.ordered %></p>
+
+<p>Reviewed Date: <%= @order.reviewed %>   Proof Sent: <%= @order.proof_sent %></p>
+
+<p>Revisions: [put a default or current version here].  Delay message, if necessary: <%= @order.delay_msg %></p>
+
+<p>Print Date: <%= @order.printed %> Date Shipped: <%= @order.shipped %></p>

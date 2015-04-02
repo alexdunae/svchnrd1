@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :members
   resources :postings
+  resources :orders
 
   root "welcome#welcome"
 

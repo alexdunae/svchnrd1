@@ -115,6 +115,15 @@ label {
     padding-right: .25em;
 }
 
+table {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+table th {
+    text-align: center;
+}
+
 footer {
     background-color: #AA3C39;
     color: #FFAE00;
@@ -132,6 +141,8 @@ footer hr {
     margin-right: auto;*/
     border-width: 1px;
 }
+
+
 
 /*div {
     border:2px solid red;

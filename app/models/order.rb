@@ -1,4 +1,6 @@
 class Order < ActiveRecord::Base
+  belongs_to :user
+  has_many :members
   belongs_to :shipping
 
   def index

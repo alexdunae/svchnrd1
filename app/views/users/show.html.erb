@@ -11,7 +11,6 @@
 
 <% current_user.orders.each do |order| %>
 
-<%= render 'orders/index_orders' %><br>
-[Link to the Order Details page/partial]
+<%= render 'orders/order', order: order %><br>
 
 <% end %> 

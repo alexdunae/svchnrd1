@@ -15,6 +15,10 @@
 <hr>
 <p><%= @member.rank %> <%= @member.last_name %>'s Career:</p>
 
-
+<table border="1">
+<tr>
+<th>Unit</th><th>Location</th><th>Start Date</th><th>End Date</th>
+</tr>
 <%= render @member.postings %>
+</table>
 
