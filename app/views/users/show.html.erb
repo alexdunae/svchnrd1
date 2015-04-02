@@ -4,7 +4,15 @@
 
 <% current_user.members.each do |member| %>
 
-<%= render member %><br>
+<%= render 'members/member', member: member %><br>
 <% end %>
+<br>
+<p>A list of your orders:</p>
 
-<p>A list of your orders:</p>  
+<%# current_user.orders.each do |order| %>
+<!-- <%#= link_to(body_type.name, body_type_path(body_type)) %> --> 
+
+<%#= render 'orders/index_orders' %><br>
+[Link to the Order Details page/partial]
+
+<%# end %> 

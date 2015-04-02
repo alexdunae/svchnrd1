@@ -1,0 +1,21 @@
+<p>Originally entered by: <%= @member.user.title %> <%= @member.user.last_name %> </p>
+<hr>
+<p><%= @member.rank %> <%= @member.last_name %>'s Personal Information</p>
+<p><%= @member.first_name %> <%= @member.initials %> <%= @member.nick_name %> <%= @member.decorations %>
+
+<p>Years of Service: <%= @member.years_service %>
+<p>Starting Branch:  <%= @member.start_badge %>  Ending Branch:  <%= @member.end_badge %>
+
+<p>Commemoration:  <%= @member.commemoration %>
+<p>Signature Block?  <%= @member.sign_block %>
+<p>Trim color selected: <%= @member.trim_color %>
+<hr>
+<p><%= @member.rank %> <%= @member.last_name %>'s Career:</p>
+
+
+
+<% @member.postings.each do |posting| %>
+
+<%= render 'postings/posting' %><br>
+
+<% end %>

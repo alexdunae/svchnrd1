@@ -10,8 +10,8 @@ class CreateMembers < ActiveRecord::Migration
       t.string :initials
       t.string :decorations
       t.integer :years_service
-      t.integer :start_badge
-      t.integer :end_badge
+      t.integer :start_branch
+      t.integer :end_branch
       t.string :commemoration
       t.integer :trim_color
       t.integer :sign_block

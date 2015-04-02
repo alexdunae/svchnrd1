@@ -1,0 +1,138 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+body {
+    padding-top: 60px;
+}
+section {
+    overflow: auto;
+}
+textarea {
+    resize: vertical;
+}
+.center {
+    text-align: center;
+}
+.center h1 {
+    margin-bottom: 10px;
+}
+/* Mikey's Tinkering */
+
+/*SH Color Scheme1 http://paletton.com/#uid=5010Z0kllll2K7xc2eruDsfSOEt 
+Red: #FF0700
+Scarlet: #E10F0A
+Rose: #AA3C39
+Yellow: #FFAE00
+Gold: #E19D0A
+*/
+body {
+    background-color: #ffffff;
+    color: #330000;
+    text-align: center;
+}
+
+.navbar .brand {
+    color: #FFAE00;
+    font-size: 30px;
+    font-weight: 200;
+    display: block;
+}
+
+.navbar {
+    background-color: #AA3C39;
+    color: #FFAE00;
+    border-radius: 0px;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFAE00;
+}
+
+h1 {
+    text-align: center;
+}
+hr {border-color: #E19D0A; /*line color in Chrome and Safari */
+    color: #FFAE00; /*line color in IE7+*/
+    background-color: #E10F0A; /*line color in Firefox/Opera*/
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+}
+#header{
+  text-align: left;
+}
+.leftCol {
+    float:left; width: 30%;
+}
+.rightCol {
+    padding: 1px 20px 20px;
+    margin-left: 32%;
+    overflow: auto;
+}
+
+.password-reset{
+    /*text-align: eenter;*/
+    display: inline-block;
+    max-width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sign-in{
+    /*text-align: eenter;*/
+    max-width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sign-up{
+    /*text-align: eenter;*/
+    max-width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.thumb {
+    max-width: 200px;
+    width: auto;
+    max-height: 200px;
+    height: auto;
+}
+img.bigPic {
+    max-width: 400px;
+    width: auto;
+    max-height: 400px;
+    height: auto;
+}
+label {
+    float: left;
+    display: inline-block;
+    text-align: right;
+    width: 10em;
+    padding-right: .25em;
+}
+
+footer {
+    background-color: #AA3C39;
+    color: #FFAE00;
+    text-align: center;
+}
+footer hr {
+    border-color: #E19D0A; /*line color in Chrome and Safari */
+    color: #FFAE00; /*line color in IE7+*/
+    background-color: #AA3C39; /*line color in Firefox/Opera*/
+    /* display: block; */
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    width: 100%;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    border-width: 1px;
+}
+
+/*div {
+    border:2px solid red;
+}*/

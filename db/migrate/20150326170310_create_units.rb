@@ -1,16 +1,16 @@
 class CreateBadges < ActiveRecord::Migration
   def change
-    create_table :badges do |t|
-      t.integer :badge_number
+    create_table :units do |t|
+      t.string :badge_code
       t.string :mil_name
       t.string :mil_abbrev
       t.integer :unit_type
       t.string :location
       t.string :parent_unit
       t.string :caption
-      t.integer :badge_id
-      t.date :start
-      t.date :end
+      t.string :badge_image_id
+      t.date :start_date
+      t.date :end_date
       t.string :predec
       t.string :decend
 

@@ -1,1 +1,4 @@
-<%= member.last_name %>
+<hr>
+<p><%= link_to("#{member.rank} #{member.last_name}(Click for Details)",
+                member_path(member))
+                %></p>

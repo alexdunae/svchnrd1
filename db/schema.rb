@@ -17,16 +17,16 @@ ActiveRecord::Schema.define(version: 20150326181341) do
   enable_extension "plpgsql"
 
   create_table "badges", force: :cascade do |t|
-    t.integer  "badge_number"
+    t.integer  "badge_id"
     t.string   "mil_name"
     t.string   "mil_abbrev"
     t.integer  "unit_type"
     t.string   "location"
     t.string   "parent_unit"
     t.string   "caption"
-    t.integer  "badge_id"
-    t.date     "start"
-    t.date     "end"
+    t.integer  "unit_id"
+    t.date     "start_date"
+    t.date     "end_date"
     t.string   "predec"
     t.string   "decend"
     t.datetime "created_at",   null: false

@@ -1,0 +1,24 @@
+<!--
+
+posting.start_date
+posting.unit.mil_abbrev
+
+-->
+
+<p><%= posting.unit.mil_abbrev %> / <%= posting.unit.location %>: Posting Start Date: <%= posting.start_post %> End Date: <%= posting.end_post %></p>
+
+<!--  Badges 
+      t.integer :badge_id
+      t.string :mil_name
+      t.string :mil_abbrev
+      t.integer :unit_type
+      t.string :location
+      t.string :parent_unit
+      t.string :caption
+
+      Postings
+      t.references :badge
+      t.references :member
+      t.date :start_post
+      t.date :end_post
+-->
