@@ -1,4 +1,4 @@
-class CreateBadges < ActiveRecord::Migration
+class CreateUnits < ActiveRecord::Migration
   def change
     create_table :units do |t|
       t.string :badge_code
