@@ -31,7 +31,9 @@ body {
     color: #330000;
     text-align: center;
 }
-
+html body #bgimage {
+    background: url('SH-LogoLg.gif');
+}
 .navbar .brand {
     color: #FFAE00;
     font-size: 30px;
