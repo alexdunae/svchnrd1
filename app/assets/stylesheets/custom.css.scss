@@ -24,37 +24,67 @@ Red: #FF0700
 Scarlet: #E10F0A
 Rose: #AA3C39
 Yellow: #FFAE00
+Medal Gold: #D5BB77
 Gold: #E19D0A
 */
 body {
     background-color: #ffffff;
     color: #330000;
     text-align: center;
+    padding-top: 0px;
 }
-html body #bgimage {
-    background: url('SH-LogoLg.gif');
+
+.brand {
+    background-image: url(/assets/SH-LogoLg.gif);
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+    min-height: 60px;
+    /*padding: 5px;*/
+    vertical-align: middle;   
 }
+.brand img {
+    padding-top: 37.36%;
+    border: 10px;
+}
+
 .navbar .brand {
-    color: #FFAE00;
-    font-size: 30px;
-    font-weight: 200;
+    color: #D5BB77;
+    font-size: 40px;
+    font-weight: 180;
     display: block;
+    padding-left: 100px;
 }
 
 .navbar {
     background-color: #AA3C39;
-    color: #FFAE00;
+    color: #D5BB77;
     border-radius: 0px;
+    font-size: 20px;
+    font-weight: 150;
 }
-.navbar-inverse .navbar-nav > li > a {
-    color: #FFAE00;
+.nav a {
+    text-decoration: none;
+    color: #D5BB77;
 }
+/*.nav a, a:hover, a:visited, a:active {
+    text-decoration: none;
+    color: #D5BB77;
+}*/
+.nav a:hover {
+    text-decoration: none;
+    color: #D5BB77;
+}
+
+/*.nav navbar-nav navbar-right a, a:hover, a:visited, a:active {
+    text-decoration: none;
+    color: #D5BB77;
+}*/
 
 h1 {
     text-align: center;
 }
 hr {border-color: #E19D0A; /*line color in Chrome and Safari */
-    color: #FFAE00; /*line color in IE7+*/
+    color: #D5BB77; /*line color in IE7+*/
     background-color: #E10F0A; /*line color in Firefox/Opera*/
     display: block;
     margin-top: 0.5em;
@@ -128,12 +158,12 @@ table th {
 
 footer {
     background-color: #AA3C39;
-    color: #FFAE00;
+    color: #D5BB77;
     text-align: center;
 }
 footer hr {
     border-color: #E19D0A; /*line color in Chrome and Safari */
-    color: #FFAE00; /*line color in IE7+*/
+    color: #D5BB77; /*line color in IE7+*/
     background-color: #AA3C39; /*line color in Firefox/Opera*/
     /* display: block; */
     margin-top: 0.2em;
