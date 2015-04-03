@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Service Honoured</title>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %> 
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tag %>
-</head>
-  <body>
+  <head>
+    <title>Service Honoured</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %> 
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body style="<%= body_style %>">
     <!-- Structure source: "https://www.railstutorial.org/book/filling_in_the_layout" -->
     <%= render 'layouts/header' %>
     <%= render 'layouts/clearance' %>
     <div class="container">
       <%= yield %>
     </div>
-    <%= render 'layouts/footer' %> 
+      <%= render 'layouts/footer' %> 
+    </div>
   </body>
 </html>

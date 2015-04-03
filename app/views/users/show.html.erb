@@ -1,13 +1,13 @@
-<p>Welcome <%= current_user.first_name %></p>
+<h2>Welcome <%= current_user.first_name %></h2>
 
-<p>A list of your members:</p>
+<h3>A list of your members:</h3>
 
 <% current_user.members.each do |member| %>
 
 <%= render 'members/member', member: member %><br>
 <% end %>
 <br>
-<p>A list of your orders:</p>
+<h3>A list of your orders:</h3>
 
 <% current_user.orders.each do |order| %>
 

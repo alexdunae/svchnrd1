@@ -5,7 +5,13 @@ Rails.application.routes.draw do
   resources :postings
   resources :orders
 
-  root "welcome#welcome"
+  get 'pages/home'
+  get 'pages/about'
+  get 'pages/contact'
+  get 'welcome/welcome'
+
+  #root "welcome#welcome"
+  root "pages#home"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

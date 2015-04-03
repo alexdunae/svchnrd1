@@ -27,11 +27,20 @@ Yellow: #FFAE00
 Medal Gold: #D5BB77
 Gold: #E19D0A
 */
+
 body {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     color: #330000;
     text-align: center;
     padding-top: 0px;
+    background-image: url(/assets/background1.png);
+    background-size: 80% 95%;
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    overflow: scroll;
+}
+
+#wrapper{
 }
 
 .brand {
@@ -48,11 +57,13 @@ body {
 }
 
 .navbar .brand {
+    background-color: transparent;
     color: #D5BB77;
     font-size: 40px;
     font-weight: 180;
     display: block;
     padding-left: 100px;
+    margin-bottom: 5px;
 }
 
 .navbar {
@@ -83,6 +94,10 @@ body {
 h1 {
     text-align: center;
 }
+h2, h3 {
+    text-align: center;
+}
+
 hr {border-color: #E19D0A; /*line color in Chrome and Safari */
     color: #D5BB77; /*line color in IE7+*/
     background-color: #E10F0A; /*line color in Firefox/Opera*/
@@ -98,6 +113,15 @@ hr {border-color: #E19D0A; /*line color in Chrome and Safari */
 #header{
   text-align: left;
 }
+
+.container{
+    background: transparent;
+    width: 80%;
+    padding: 0%;
+    padding-left: 120px;
+    text-align: left;
+}
+
 .leftCol {
     float:left; width: 30%;
 }
