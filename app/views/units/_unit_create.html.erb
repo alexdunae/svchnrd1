@@ -1,0 +1,86 @@
+<%= form_for @unit do |f| %>
+  <% if @unit.errors.any? %>
+  
+    <div class='errors'>
+      <h2>Uh oh, errors!</h2>
+      <% @unit.errors.full_messages.each do |msg| %>
+        <p><%= msg %></p>
+      <% end %>
+    </div>
+  <% end %>
+  
+  <div class='field'>
+    <%= f.label :mil_abbrev, 'What Unit Abbrev?' %>
+    <%= f.collection_select :mil_abbrev, Unit.all, :id, :mil_abbrev %>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :mil_name, "What Unit Name" %>
+    <%= f.collection_select :mil_name, Unit.all, :id, :mil_name %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :location, "Location" %>
+    <%= f.collection_select :location, Unit.all, :id, :mil_name %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :parent_unit, "Parent Unit or Command HQ?" %>
+    <%= f.collection_select :parent_unit, Unit.all, :id, :mil_name %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :caption, "Caption for Scroll?" %>
+    <%= f.collection_select :caption, Unit.all, :id, :mil_name %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :badge_image_id, "Badge Id?" %>
+    <%= f.collection_select :badge_image_id, Unit.all, :id, :mil_name %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :start_date, "Unit Stand-up Date?" %>
+    <%= f.collection_select :start_date, Unit.all, :id, :mil_name %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :end_date, "Unit Close Date?" %>
+    <%= f.collection_select :end_date, Unit.all, :id, :mil_name %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :predec, "Predecesor Unit?" %>
+    <%= f.collection_select :predec, Unit.all, :id, :mil_name %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :decend, "Decendent Unit?" %>
+    <%= f.collection_select :decend, Unit.all, :id, :mil_name %>
+  </div>
+
+  <div class='field'>
+    <%= f.submit 'Save' %>
+  </div>
+
+<% end %>
+
+<%#= f.collection_select :service_number, memberType.all, :id, :name %>
+<%#= text_area_tag(:message, "Hi, nice site", size: "24x6") %>
+<%#= password_field_tag(:password) %>
+<%#= hidden_field_tag(:parent_id, "5") %>
+<%#= search_field(:user, :name) %>
+<%#= telephone_field(:user, :phone) %>
+<%#= date_field(:user, :born_on) %>
+<%#= datetime_field(:user, :meeting_time) %>
+<%#= datetime_local_field(:user, :graduation_day) %>
+<%#= month_field(:user, :birthday_month) %>
+<%#= week_field(:user, :birthday_week) %>
+<%#= url_field(:user, :homepage) %>
+<%#= email_field(:user, :address) %>
+<%#= color_field(:user, :favorite_color) %>
+
+<!--Future image upload option: -->
+<%#= form_for @person do |f| %>
+  <%#= f.file_field :picture %>
+<%# end %>

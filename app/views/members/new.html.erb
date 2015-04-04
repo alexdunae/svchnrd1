@@ -1,0 +1,100 @@
+<%= form_for @member do |f| %>
+  <% if @member.errors.any? %>
+    <div class='errors'>
+    <h2>Uh oh, errors!</h2>
+    <% @member.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+    </div>
+  <% end %>
+
+  <div class='field'>
+     <%= f.label :service_number, 'Service Number, if known - Not Required' %>
+     <%= f.collection_select :service_number, Member.all, :id, :service_number %>
+   </div>
+
+   <div class='field'>
+      <%= f.label :rank %>
+      <%= f.collection_select :rank, Member.all, :id, :rank %>
+   </div>
+
+   <div class='field'>
+      <%= f.label :first_name %>
+      <%= f.text_area :first_name %>
+   </div>
+
+   <div class='field'>
+      <%= f.label :last_name %>
+      <%= f.text_area :last_name %>
+   </div>
+
+   <div class='field'>
+      <%= f.label :nick_name %>
+      <%= f.text_area :nick_name %>
+   </div>
+
+   <div class='field'>
+      <%= f.label :initials %>
+      <%= f.text_area :initials %>
+   </div>
+
+   <div class='field'>
+      <%= f.label :decorations %>
+      <%= f.text_area :decorations %>
+   </div>
+
+   <div class='field'>
+      <%= f.label :years_service %>
+      <%= f.text_area :years_service %>
+   </div>
+
+   <div class='field'>
+      <%= f.label :start_branch %>
+      <%= f.text_area :start_branch %>
+   </div>
+
+   <div class='field'>
+      <%= f.label :end_branch %>
+      <%= f.text_area :end_branch %>
+   </div>      
+
+   <div class='field'>
+      <%= f.label :commemoration %>
+      <%= f.text_area :commemoration %>
+   </div> 
+
+   <div class='field'>
+      <%= f.label :trim_color %>
+      <%= f.text_area :trim_color %>
+   </div>      
+
+   <div class='field'>
+      <%= f.label :sign_block %>
+      <%= f.text_area :sign_block %>
+   </div> 
+
+   <div class='field'>
+      <%= f.submit 'Save' %>
+   </div>
+
+<% end %>
+
+<%#= f.collection_select :service_number, memberType.all, :id, :name %>
+<%#= text_area_tag(:message, "Hi, nice site", size: "24x6") %>
+<%#= password_field_tag(:password) %>
+<%#= hidden_field_tag(:parent_id, "5") %>
+<%#= search_field(:user, :name) %>
+<%#= telephone_field(:user, :phone) %>
+<%#= date_field(:user, :born_on) %>
+<%#= datetime_field(:user, :meeting_time) %>
+<%#= datetime_local_field(:user, :graduation_day) %>
+<%#= month_field(:user, :birthday_month) %>
+<%#= week_field(:user, :birthday_week) %>
+<%#= url_field(:user, :homepage) %>
+<%#= email_field(:user, :address) %>
+<%#= color_field(:user, :favorite_color) %>
+
+<!--Future background/watermark image upload option: -->
+<%#= form_for @person do |f| %>
+  <%#= f.file_field :picture %>
+<%# end %>

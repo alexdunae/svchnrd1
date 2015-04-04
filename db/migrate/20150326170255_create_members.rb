@@ -2,6 +2,7 @@ class CreateMembers < ActiveRecord::Migration
   def change
     create_table :members do |t|
       t.references :user
+      t.references :posting
       t.string :service_number
       t.string :rank
       t.string :first_name

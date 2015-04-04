@@ -1,0 +1,26 @@
+<p><%= @badge.mil_abbrev %> / <%= @badge.location %>: Posting Start Date: <%= posting.start_post %> End Date: <%= posting.end_post %></p>
+
+<!--  Badges 
+      t.integer :badge_id
+      t.string :mil_name
+      t.string :mil_abbrev
+      t.integer :unit_type
+      t.string :location
+      t.string :parent_unit
+      t.string :caption
+
+      Postings
+      t.references :badge
+      t.references :member
+      t.date :start_post
+      t.date :end_post
+-->
+
+<%= form_for(Posting.new, remote: true) do |f| %>
+<%= collection_select(:badges, :badge_id, Badge.all, :id, :mil_name) %>
+<%#= f.text_field :badges.mil_name, class: 'u-full-width', placeholder: 'Full Unit Name' %>
+<%= f.text_field :posting.start_date, class: 'u-full-width', placeholder: 'Start of Posting' %>
+<%= f.text_field :posting.end_date, class: 'u-full-width', placeholder: 'End of Posting' %>
+<br>
+<%= f.submit 'Save', class: 'button-primary' %>
+<% end %>

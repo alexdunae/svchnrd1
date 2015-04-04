@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20150326181341) do
 
   create_table "members", force: :cascade do |t|
     t.integer  "user_id"
+    t.integer  "posting_id"
     t.string   "service_number"
     t.string   "rank"
     t.string   "first_name"
@@ -95,6 +96,7 @@ ActiveRecord::Schema.define(version: 20150326181341) do
   end
 
   create_table "units", force: :cascade do |t|
+    t.integer  "posting_id"
     t.string   "mil_name"
     t.string   "mil_abbrev"
     t.integer  "unit_type"

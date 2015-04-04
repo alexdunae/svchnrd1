@@ -1,6 +1,7 @@
 class CreateUnits < ActiveRecord::Migration
   def change
     create_table :units do |t|
+      t.references :posting
       t.string :mil_name
       t.string :mil_abbrev
       t.integer :unit_type
