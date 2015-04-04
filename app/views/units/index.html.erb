@@ -1,0 +1,21 @@
+<% @unit.each do |unit| %>
+
+<table border="1">
+<tr>
+<th>Unit Name</th><th>Abbrev</th><th>Location</th><th>Badge Image ID</th>
+</tr>
+<%#= render 'unit_details' %>
+</table>
+<br>
+
+ <pre><%= unit.inspect %></pre>
+
+    <%#= link_to 'Edit', edit_user_path(current_user.id) %>
+    <%#= link_to 'Delete',
+        user_path(currrent_user.id),
+        method: :delete, data: { confirm: 'Really?' } %>
+
+<% end %>
+
+
+ 

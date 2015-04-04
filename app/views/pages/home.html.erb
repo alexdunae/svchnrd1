@@ -1,5 +1,14 @@
-<h1>Hi!</h1>
-
 <p>Thanks for coming, and hope we can help you make an awesome momento of a service person's career.</p>
 
-<%= render 'sessions/form' %>
+<p><%= link_to 'Your Members', user_path(current_user.id) %></p>
+<p><%= link_to 'Enter New Member!', new_member_path %></p>
+<p><%= link_to 'Your Orders', order_path(current_user.id) %></p>
+<br>
+<hr>
+<br>
+<p>Or <%= link_to 'Honour a Service Member - Pay it Forward!', pages_about_path %></p>
+<br>
+<hr>
+<br>
+<p>Admin Section</p>
+<p><%= link_to 'Maintenance', units_path(current_user.id) %></p>
