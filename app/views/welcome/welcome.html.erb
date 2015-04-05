@@ -1,15 +1,17 @@
 <p>Thanks for coming, and hope we can help you make an awesome momento of a service person's career.</p>
 
-<p>Or <%#= link_to 'Your Members', welcome_welcome %></p>
+<p>Welcome Home</p>
+
+<p>Or <%= link_to 'Your Members', root_path %></p>
 <p>Or <%= link_to 'Enter New Member!', new_member_path %></p>
-<p>Or <%= link_to 'Your Orders', order_path %></p>
+<p>Or <%#= link_to 'Your Orders', order_path(current_user.id) %></p>
 <br>
 <hr>
 <br>
-<p>Or <%= link_to 'Honour a Service Member - Pay it Forward!', pages_about__path %></p>
+<p>Or <%= link_to 'Honour a Service Member - Pay it Forward!', pages_about_path %></p>
 <br>
 <hr>
 <br>
 <p>Admin Section</p>
-<p>Or <%= link_to 'Maintenance', unit_path %></p>
+<p>Or <%#= link_to 'Maintenance', unit_path(current_user.id) %></p>
 

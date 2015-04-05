@@ -10,12 +10,12 @@
 <hr>
   <div class='field'>
      <%= f.label :service_number, 'Service Number' %>
-     <%= f.collection_select :service_number, Member.all, :id, :service_number %>
+     <%= f.text_field :service_number %>
   </div>
 <br>
   <div class='field'>
       <%= f.label :rank %>
-      <%= f.collection_select :rank, Member.all, :id, :rank %>
+      <%= f.collection_select :rank, Rank.all.order(:priority), :id, :rank %>
   </div>
 <br>
   <div class='field'>
@@ -65,8 +65,9 @@
 
   <div class='field'>
       <%= f.label :trim_color %>
-      <%= f.text_field :trim_color %>
-  </div>      
+      <%= f.collection_select :trim_color, ColorTrim.all, :id, :trim_color %>
+  </div>
+  <br>      
 
   <div class='field'>
       <%= f.label :sign_block %>
