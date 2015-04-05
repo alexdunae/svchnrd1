@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150326181341) do
+ActiveRecord::Schema.define(version: 20150405065950) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "color_trims", force: :cascade do |t|
+    t.integer  "member_id"
+    t.integer  "order_id"
+    t.string   "trim_color"
+    t.string   "rgb_value"
+    t.string   "mat_company"
+    t.string   "mat_name"
+    t.string   "mat_sku"
+    t.string   "remarks"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "members", force: :cascade do |t|
     t.integer  "user_id"
@@ -78,6 +91,20 @@ ActiveRecord::Schema.define(version: 20150326181341) do
     t.date     "end_post"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "ranks", force: :cascade do |t|
+    t.integer  "member_id"
+    t.integer  "user_id"
+    t.string   "rank"
+    t.string   "rank_abbrev"
+    t.integer  "priority"
+    t.string   "branch"
+    t.string   "country"
+    t.string   "style"
+    t.string   "remarks"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "shippings", force: :cascade do |t|

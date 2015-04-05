@@ -7,75 +7,75 @@
     <% end %>
     </div>
   <% end %>
-
+<hr>
   <div class='field'>
-     <%= f.label :service_number, 'Service Number, if known - Not Required' %>
+     <%= f.label :service_number, 'Service Number' %>
      <%= f.collection_select :service_number, Member.all, :id, :service_number %>
-   </div>
-
-   <div class='field'>
+  </div>
+<br>
+  <div class='field'>
       <%= f.label :rank %>
       <%= f.collection_select :rank, Member.all, :id, :rank %>
-   </div>
-
-   <div class='field'>
+  </div>
+<br>
+  <div class='field'>
       <%= f.label :first_name %>
-      <%= f.text_area :first_name %>
-   </div>
+      <%= f.text_field :first_name %>
+  </div>
 
-   <div class='field'>
+  <div class='field'>
       <%= f.label :last_name %>
-      <%= f.text_area :last_name %>
-   </div>
+      <%= f.text_field :last_name %>
+  </div>
 
-   <div class='field'>
+  <div class='field'>
       <%= f.label :nick_name %>
-      <%= f.text_area :nick_name %>
-   </div>
+      <%= f.text_field :nick_name %>
+  </div>
 
-   <div class='field'>
+  <div class='field'>
       <%= f.label :initials %>
-      <%= f.text_area :initials %>
-   </div>
+      <%= f.text_field :initials %>
+  </div>
 
-   <div class='field'>
+  <div class='field'>
       <%= f.label :decorations %>
-      <%= f.text_area :decorations %>
-   </div>
+      <%= f.text_field :decorations %>
+  </div>
 
-   <div class='field'>
+  <div class='field'>
       <%= f.label :years_service %>
-      <%= f.text_area :years_service %>
-   </div>
+      <%= f.text_field :years_service %>
+  </div>
 
-   <div class='field'>
+  <div class='field'>
       <%= f.label :start_branch %>
-      <%= f.text_area :start_branch %>
-   </div>
+      <%= f.text_field :start_branch %>
+  </div>
 
-   <div class='field'>
+  <div class='field'>
       <%= f.label :end_branch %>
-      <%= f.text_area :end_branch %>
-   </div>      
+      <%= f.text_field :end_branch %>
+  </div>      
 
-   <div class='field'>
+  <div class='field'>
       <%= f.label :commemoration %>
-      <%= f.text_area :commemoration %>
-   </div> 
+      <%= f.text_field :commemoration %>
+  </div> 
 
-   <div class='field'>
+  <div class='field'>
       <%= f.label :trim_color %>
-      <%= f.text_area :trim_color %>
-   </div>      
+      <%= f.text_field :trim_color %>
+  </div>      
 
-   <div class='field'>
+  <div class='field'>
       <%= f.label :sign_block %>
-      <%= f.text_area :sign_block %>
-   </div> 
+      <%= f.text_field :sign_block %>
+  </div> 
 
-   <div class='field'>
+  <div class='field'>
       <%= f.submit 'Save' %>
-   </div>
+  </div>
 
 <% end %>
 
@@ -98,3 +98,10 @@
 <%#= form_for @person do |f| %>
   <%#= f.file_field :picture %>
 <%# end %>
+
+<!--  t.integer :years_service
+      t.integer :start_branch
+      t.integer :end_branch
+      t.string :commemoration
+      t.integer :trim_color
+      t.integer :sign_block  -->
