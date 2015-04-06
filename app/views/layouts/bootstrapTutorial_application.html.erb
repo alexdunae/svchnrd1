@@ -19,6 +19,16 @@
     <![endif]-->
   </head>
   <body style="<%= body_style %>">
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <h1>Hello, Twitter Bootstrap</h1>
+    <%= render 'layouts/navigation_bar' %>
+    <ul class="hmenu">
+      <%#= render 'devise/menu/registration_items' %>
+      <%#= render 'devise/menu/login_items' %>
+    </ul>
     <!-- Structure source: "https://www.railstutorial.org/book/filling_in_the_layout" -->
     <%= render 'layouts/header' %>
     <%= render 'layouts/clearance' %>

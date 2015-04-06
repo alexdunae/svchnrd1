@@ -14,66 +14,65 @@
   </div>
 <br>
   <div class='field'>
-      <%= f.label :rank %>
+      <%= f.label :rank, 'Rank'  %>
       <%= f.collection_select :rank, Rank.all.order(:priority), :id, :rank %>
   </div>
 <br>
   <div class='field'>
-      <%= f.label :first_name %>
+      <%= f.label :first_name, 'First Name' %>
       <%= f.text_field :first_name %>
   </div>
 
   <div class='field'>
-      <%= f.label :last_name %>
+      <%= f.label :last_name, 'Last Name' %>
       <%= f.text_field :last_name %>
   </div>
 
   <div class='field'>
-      <%= f.label :nick_name %>
+      <%= f.label :nick_name, 'Nickname/Call Sign' %>
       <%= f.text_field :nick_name %>
   </div>
 
   <div class='field'>
-      <%= f.label :initials %>
+      <%= f.label :initials, 'Initials' %>
       <%= f.text_field :initials %>
   </div>
 
   <div class='field'>
-      <%= f.label :decorations %>
+      <%= f.label :decorations, 'Decorations' %>
       <%= f.text_field :decorations %>
   </div>
 
   <div class='field'>
-      <%= f.label :years_service %>
+      <%= f.label :years_service, 'Years of Service' %>
       <%= f.text_field :years_service %>
   </div>
 
   <div class='field'>
-      <%= f.label :start_branch %>
+      <%= f.label :start_branch, 'Branch Enrolled' %>
       <%= f.text_field :start_branch %>
   </div>
 
   <div class='field'>
-      <%= f.label :end_branch %>
+      <%= f.label :end_branch, 'Branch Retired' %>
       <%= f.text_field :end_branch %>
   </div>      
 
   <div class='field'>
       <%= f.label :commemoration %>
-      <%= f.text_field :commemoration %>
+      <%= f.check_box :commemoration %>
   </div> 
-
+  <br>
+  <div class='field'>
+      <%= f.label :sign_block %>
+      <%= f.check_box :sign_block %>
+  </div> 
+  <br>
   <div class='field'>
       <%= f.label :trim_color %>
       <%= f.collection_select :trim_color, ColorTrim.all, :id, :trim_color %>
   </div>
-  <br>      
-
-  <div class='field'>
-      <%= f.label :sign_block %>
-      <%= f.text_field :sign_block %>
-  </div> 
-
+  <br>        
   <div class='field'>
       <%= f.submit 'Save' %>
   </div>

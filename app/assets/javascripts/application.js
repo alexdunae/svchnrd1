@@ -11,6 +11,15 @@
 // about supported directives.
 //
 //= require jquery
+
+//= require bootstrap
+//= require bootstrap-sprockets
+// require bootstrap/dropdown
+
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+// Bootstrap Dropdown menus needs this:
+$('.dropdown-toggle').dropdown();
