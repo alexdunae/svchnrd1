@@ -11,15 +11,15 @@
 // about supported directives.
 //
 //= require jquery
-
-//= require bootstrap
-//= require bootstrap-sprockets
-// require bootstrap/dropdown
-
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
 
+// require bootstrap  //put this back in production mode?!
+//= require bootstrap-sprockets
+//= require bootstrap/dropdown
+
+//= require_tree .
+//= require turbolinks
 
 // Bootstrap Dropdown menus needs this:
-$('.dropdown-toggle').dropdown();
+//$('.dropdown-toggle').dropdown();
