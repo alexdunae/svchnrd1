@@ -2,16 +2,22 @@
 
 <p>Welcome Home</p>
 
-<p>Or <%= link_to 'Your Members', root_path %></p>
-<p>Or <%= link_to 'Enter New Member!', new_member_path %></p>
-<p>Or <%#= link_to 'Your Orders', order_path(current_user.id) %></p>
-<br>
-<hr>
-<br>
-<p>Or <%= link_to 'Honour a Service Member - Pay it Forward!', pages_about_path %></p>
-<br>
-<hr>
-<br>
-<p>Admin Section</p>
-<p>Or <%#= link_to 'Maintenance', unit_path(current_user.id) %></p>
+<% if signed_in? %>
 
+  <p>Or <%= link_to 'Your Members', root_path %></p>
+  <p>Or <%= link_to 'Enter New Member!', new_member_path %></p>
+  <p>Or <%#= link_to 'Your Orders', order_path(current_user.id) %></p>
+  <br>
+  <hr>
+  <br>
+  <p>Or <%= link_to 'Honour a Service Member - Pay it Forward!', pages_about_path %></p>
+  <br>
+  <hr>
+  <br>
+  <p>Admin Section</p>
+  <p>Or <%#= link_to 'Maintenance', unit_path(current_user.id) %></p>
+
+<% else %>
+
+  <p><%= link_to 'Sign in to get started!', sign_in_path %></p>
+<% end %>
