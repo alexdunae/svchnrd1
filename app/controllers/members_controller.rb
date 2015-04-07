@@ -2,19 +2,19 @@ class MembersController < ApplicationController
   before_action :require_login
 
   def show
-    @member = Member.find(params[:id])
+    @member = current_user.members.find(params[:id])
   end
 
   def create
-    @member = Member.find(params[:id])
+    @member = current_user.members.find(params[:id])
   end
 
  def new
-    @member = Member.new
+    @member = current_user.members.new
   end
 
   def create
-    @member = Member.new(member_params)
+    @member = current_user.members.new(member_params)
     if @member.save
       redirect_to member_path(@member)
     else
@@ -23,11 +23,11 @@ class MembersController < ApplicationController
   end
 
   def edit
-    @member = Member.find(params[:id])
+    @member = current_user.members.find(params[:id])
   end
 
   def update
-    @member = Member.find(params[:id])
+    @member = current_user.members.find(params[:id])
     if @member.update_attributes(member_params)
       redirect_to members_path
     else
@@ -36,7 +36,7 @@ class MembersController < ApplicationController
   end
 
   def destroy
-    @member = Member.find(params[:id])
+    @member = current_user.members.find(params[:id])
     @member.destroy
     redirect_to members_path
   end
