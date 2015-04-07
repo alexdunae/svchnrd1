@@ -1,4 +1,5 @@
 class PostingsController < ApplicationController
+  before_action :require_login
   helper_method :current_member
 
   def show

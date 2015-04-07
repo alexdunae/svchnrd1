@@ -1,4 +1,5 @@
 class PayForwardsController < ApplicationController
+  before_action :require_login
   helper_method :current_payforward
   helper_method :current_user
 
@@ -31,5 +32,5 @@ class PayForwardsController < ApplicationController
   def current_member
     @_member ||= Member.find(params[:member_id])
   end
- 
+
 end
