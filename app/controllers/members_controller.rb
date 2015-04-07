@@ -42,7 +42,7 @@ class MembersController < ApplicationController
 private
 
   def member_params
-    params.require(:last_name).permit(:service_number, :rank, :first_name, :nick_name, :initials, :decorations, :years_service, :start_branch, :end_branch, :commemoration, :trim_color, :sign_block)
+    params.require(:member).permit(:service_number, :rank, :first_name, :nick_name, :initials, :decorations, :years_service, :start_branch, :end_branch, :commemoration, :trim_color, :sign_block)
   end
 
 end
