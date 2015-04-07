@@ -1,0 +1,2 @@
+class ContactMailerController < ApplicationController
+end

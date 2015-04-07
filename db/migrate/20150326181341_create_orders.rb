@@ -4,7 +4,7 @@ class CreateOrders < ActiveRecord::Migration
       t.references :user
       t.references :member
       t.references :shipping
-      t.references :payfwd
+      t.references :pay_forward
       t.date :ordered
       t.date :reviewed
       t.date :proof_sent

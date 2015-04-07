@@ -1,6 +1,6 @@
 <h2>Welcome <%= current_user.first_name %></h2>
 
-<h3>A list of your members:</h3>
+<h3>A List of Your Members:</h3>
 
 <% current_user.members.each do |member| %>
 
@@ -9,10 +9,18 @@
 
 <p>Or <%= link_to 'Enter New Member!', new_member_path %></p>
 <br>
-<h3>A list of your orders:</h3>
+<h3>A List of Your Orders:</h3>
 
 <% current_user.orders.each do |order| %>
 
 <%= render 'orders/order', order: order %><br>
+
+<% end %> 
+
+<h3>A List of Your Pay Forwards:</h3>
+
+<% current_user.orders.each do |pay_forward| %>
+
+<%= render 'pay_forwards/pay_forward', pay_forward: pay_forward %><br>
 
 <% end %> 

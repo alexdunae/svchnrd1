@@ -5,9 +5,13 @@ Rails.application.routes.draw do
   resources :postings
   resources :orders
   resources :units
+  resources :pay_forwards
+
+  match '/send_mail', to: 'contact#send_mail', via: 'post'
 
   get 'pages/home'
   get 'pages/about'
+  get 'pages/faq'
   get 'pages/contact'
   #get 'welcome/welcome'
 

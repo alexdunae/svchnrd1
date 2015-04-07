@@ -22,5 +22,19 @@ module Svchnrd1
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # mailer config?
+    config.action_mailer.delivery_method = :sendmail
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.raise_delivery_errors = true
+
   end
+
+    #ActionMailer::Base.pop_settings = {
+    #    address: 'pop.shaw.ca',
+    #    port: '',
+    #    user_name: ENV['servicehonoured'],
+    #    password: ENV['resv']
+    #}
+
 end

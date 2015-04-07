@@ -107,6 +107,9 @@ Rank.create(rank: 'Major-General', rank_abbrev: 'MGen', priority: 18, branch: 'S
 Rank.create(rank: 'Lieutenant-General', rank_abbrev: 'LGen', priority: 19, branch: 'Sea', country: 'Canada', style: '', remarks: '')
 Rank.create(rank: 'General', rank_abbrev: 'Gen', priority: 20, branch: 'Sea', country: 'Canada', style: '', remarks: '')
 
+PayForward.create(date_paid: Date.new(2014, 8, 1), date_issued: Date.new(2015, 1, 20), gift_note: 'Thanks for serving', remarks: '', know_to: true, know_from: true)
+PayForward.create(date_paid: Date.new(2015, 1, 20), date_issued: nil, gift_note: 'Thanks for serving', remarks: '', know_to: true, know_from: true)
+
 ColorTrim.create(trim_color: 'Burgundy', rgb_value: '#a0272e', mat_company: 'Crescent', mat_name: 'Garnet', mat_sku: '1643', remarks: 'RagMat')
 ColorTrim.create(trim_color: 'Uniform Blue', rgb_value: '#3A5776', mat_company: 'Crescent', mat_name: 'Newport Blue', mat_sku: '1550', remarks: 'RagMat')
 ColorTrim.create(trim_color: 'Bright Blue', rgb_value: '#1E3587', mat_company: 'Crescent', mat_name: 'Lapis', mat_sku: '1626', remarks: 'RagMat')

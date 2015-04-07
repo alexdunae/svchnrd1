@@ -1,6 +1,6 @@
-class CreatePayfwds < ActiveRecord::Migration
+class CreatePayForwards < ActiveRecord::Migration
   def change
-    create_table :payfwds do |t|
+    create_table :pay_forwards do |t|
       t.references :user
       t.references :member
       t.references :order

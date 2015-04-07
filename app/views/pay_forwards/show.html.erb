@@ -1,0 +1,19 @@
+<h2>Your Pay Forwards</h2>
+
+<p>Thank a service member with a gift of a career commemoration scroll</p>
+
+<p>Your Orders:</p>
+<table border="1">
+<tr>
+<th>Date Ordered</th><th>Date Issued</th><th>Know From</th><th>Know To</th><th>Gift Note</th>
+</tr>
+<%# @pay_forwards.each do |order| %>
+ <%#= render 'pay_forwards/payforwards_details' %>
+
+<%# end %>
+<%#= render @pay_forwards.payforwards_details %>
+<%#= render @user.pay_forwards %>
+</table>
+<br>
+
+<p><%= link_to 'Back to Members', user_path(current_user) %></p>

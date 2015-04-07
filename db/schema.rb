@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150405065950) do
+ActiveRecord::Schema.define(version: 20150406210115) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,11 @@ ActiveRecord::Schema.define(version: 20150405065950) do
     t.string   "remarks"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "contact_mailers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "members", force: :cascade do |t|
@@ -53,7 +58,7 @@ ActiveRecord::Schema.define(version: 20150405065950) do
     t.integer  "user_id"
     t.integer  "member_id"
     t.integer  "shipping_id"
-    t.integer  "payfwd_id"
+    t.integer  "pay_forward_id"
     t.date     "ordered"
     t.date     "reviewed"
     t.date     "proof_sent"
@@ -66,11 +71,11 @@ ActiveRecord::Schema.define(version: 20150405065950) do
     t.string   "remarks"
     t.string   "delay_msg"
     t.string   "exception"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
-  create_table "payfwds", force: :cascade do |t|
+  create_table "pay_forwards", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "member_id"
     t.integer  "order_id"
