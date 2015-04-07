@@ -14,7 +14,7 @@ class MembersController < ApplicationController
   def create
     @member = Member.new(member_params)
     if @member.save
-      redirect_to members_path
+      redirect_to member_path(@member)
     else
       render :new
     end
